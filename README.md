@@ -50,6 +50,7 @@ The application will be running at http://localhost:3000.
 ### Production App
 
 The application is live at https://question-engine.onrender.com/
+
 ---
 
 ## Features
@@ -91,3 +92,7 @@ The application is live at https://question-engine.onrender.com/
 | Method   | Endpoint           | Description                        |
 |----------|--------------------|------------------------------------|
 | `GET`    | `/questions/json`  | Retrieve all questions as JSON.    |
+
+### 3. Postman collection to see the enpoints usage examples
+
+Import this file to postman for collection: question-management/Question API Collection.postman_collection.json

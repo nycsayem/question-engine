@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "2cdf91e7-bec6-4cf5-b7fc-172ecb3efd16",
+		"name": "Question API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41122756",
+		"_collection_link": "https://www.postman.com/workspace/My-Workspace~349a879b-5a02-47b8-83e9-e55782e5dc8e/collection/41122756-2cdf91e7-bec6-4cf5-b7fc-172ecb3efd16?action=share&source=collection_link&creator=41122756"
+	},
+	"item": [
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"question\": \"Use <color=green>Text</color> for example.\\nUse <color=#FF7D00>Color for Hex</color>.\\nUse \\\\n tag for a new line.\\nUse <b>BOLD</b> for bold text.\\nUse <i>Italic text</i>.\",\n  \"solution\": \"Use <color=green>Text</color> for example.\\nUse <color=#FF7D00>Color for Hex</color>.\\nUse \\\\n tag for a new line.\\nUse <b>BOLD</b> for bold text.\\nUse <i>Italic text</i>.\",\n  \"correctAnswer\": \"0.05\",\n  \"options\": [\n    \"0.05\",\n    \"13.2\",\n    \"21\",\n    \"264\"\n  ],\n  \"steps\": [\n    {\n      \"title\": \"Step Title 1\",\n      \"result\": \"Result Title 1\",\n      \"imageUrl\": \"https://example.com/images/step1.jpg\"\n    },\n    {\n      \"title\": \"Step Title 2\",\n      \"result\": \"Result Title 2\",\n      \"imageUrl\": \"https://example.com/images/step2.jpg\"\n    }\n  ],\n  \"imageUrl\": \"https://example.com/images/question_image.jpg\"\n}\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Question",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"question\": \"What is 2+2?\",\n  \"solution\": \"Simple arithmetic\",\n  \"correctAnswer\": \"4\",\n  \"options\": [\"1\", \"2\", \"3\", \"4\"],\n  \"steps\": [],\n  \"imageUrl\": \"\",\n  \"tags\": [\"math\"],\n  \"skills\": [\"addition\"],\n  \"difficulty\": \"easy\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-amrkfHP/7xArBYX+0DqdPvwPkgs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 07:51:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"question\": \"What is 2+2?\",\n    \"solution\": \"Simple arithmetic\",\n    \"correctAnswer\": \"4\",\n    \"options\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\"\n    ],\n    \"steps\": [],\n    \"imageUrl\": \"\",\n    \"tags\": [\n        \"math\"\n    ],\n    \"skills\": [\n        \"addition\"\n    ],\n    \"difficulty\": \"easy\",\n    \"_id\": \"6788ba792f82e441703983f0\",\n    \"createdAt\": \"2025-01-16T07:51:21.770Z\",\n    \"updatedAt\": \"2025-01-16T07:51:21.770Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Questions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1030"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"406-JkkPt8/T/Q6WTBLiD0El67Cxs8E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 07:51:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6788b75c2f82e441703983ec\",\n        \"question\": \"In a town, there is a 4-acre park...\",\n        \"solution\": \"<color=green>Answer choice A is correct...</color>\",\n        \"correctAnswer\": \"A\",\n        \"options\": [\n            \"A\",\n            \"B\",\n            \"C\",\n            \"D\"\n        ],\n        \"tags\": [\n            \"math\",\n            \"word-problems\"\n        ],\n        \"skills\": [],\n        \"difficulty\": \"medium\",\n        \"steps\": [],\n        \"createdAt\": \"2025-01-16T07:38:04.190Z\",\n        \"updatedAt\": \"2025-01-16T07:38:04.190Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6788b7972f82e441703983ee\",\n        \"question\": \"In a town, there is a 4-acre park...\",\n        \"solution\": \"<color=green>Answer choice A is correct...</color>\",\n        \"correctAnswer\": \"A\",\n        \"options\": [\n            \"A\",\n            \"B\",\n            \"C\",\n            \"D\"\n        ],\n        \"tags\": [\n            \"math\",\n            \"word-problems\"\n        ],\n        \"skills\": [],\n        \"difficulty\": \"medium\",\n        \"steps\": [],\n        \"createdAt\": \"2025-01-16T07:39:03.938Z\",\n        \"updatedAt\": \"2025-01-16T07:39:03.938Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6788ba792f82e441703983f0\",\n        \"question\": \"What is 2+2?\",\n        \"solution\": \"Simple arithmetic\",\n        \"correctAnswer\": \"4\",\n        \"options\": [\n            \"1\",\n            \"2\",\n            \"3\",\n            \"4\"\n        ],\n        \"steps\": [],\n        \"imageUrl\": \"\",\n        \"tags\": [\n            \"math\"\n        ],\n        \"skills\": [\n            \"addition\"\n        ],\n        \"difficulty\": \"easy\",\n        \"createdAt\": \"2025-01-16T07:51:21.770Z\",\n        \"updatedAt\": \"2025-01-16T07:51:21.770Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Unity JSON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/json",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"json"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Unity JSON",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"json"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "673"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a1-Ls3TfcOhW0DikkJCGNDCxYe2ryA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 07:51:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Question\": \"In a town, there is a 4-acre park...\",\n        \"Solution\": \"<color=green>Answer choice A is correct...</color>\",\n        \"CorrectAnswer\": \"A\",\n        \"Options\": [\n            \"A\",\n            \"B\",\n            \"C\",\n            \"D\"\n        ],\n        \"Steps\": [],\n        \"Tags\": [\n            \"math\",\n            \"word-problems\"\n        ],\n        \"Skills\": [],\n        \"Difficulty\": \"medium\"\n    },\n    {\n        \"Question\": \"In a town, there is a 4-acre park...\",\n        \"Solution\": \"<color=green>Answer choice A is correct...</color>\",\n        \"CorrectAnswer\": \"A\",\n        \"Options\": [\n            \"A\",\n            \"B\",\n            \"C\",\n            \"D\"\n        ],\n        \"Steps\": [],\n        \"Tags\": [\n            \"math\",\n            \"word-problems\"\n        ],\n        \"Skills\": [],\n        \"Difficulty\": \"medium\"\n    },\n    {\n        \"Question\": \"What is 2+2?\",\n        \"Solution\": \"Simple arithmetic\",\n        \"CorrectAnswer\": \"4\",\n        \"Options\": [\n            \"1\",\n            \"2\",\n            \"3\",\n            \"4\"\n        ],\n        \"Steps\": [],\n        \"ImageUrl\": \"\",\n        \"Tags\": [\n            \"math\"\n        ],\n        \"Skills\": [\n            \"addition\"\n        ],\n        \"Difficulty\": \"easy\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Question by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/6788b75c2f82e441703983ec",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"6788b75c2f82e441703983ec"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Question by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/6788b75c2f82e441703983ec",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"6788b75c2f82e441703983ec"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "359"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"167-dZgrOzAmMPCVBoSQ7wl+2aETBdo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 07:52:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6788b75c2f82e441703983ec\",\n    \"question\": \"In a town, there is a 4-acre park...\",\n    \"solution\": \"<color=green>Answer choice A is correct...</color>\",\n    \"correctAnswer\": \"A\",\n    \"options\": [\n        \"A\",\n        \"B\",\n        \"C\",\n        \"D\"\n    ],\n    \"tags\": [\n        \"math\",\n        \"word-problems\"\n    ],\n    \"skills\": [],\n    \"difficulty\": \"medium\",\n    \"steps\": [],\n    \"createdAt\": \"2025-01-16T07:38:04.190Z\",\n    \"updatedAt\": \"2025-01-16T07:38:04.190Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Question",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"question\": \"What is 5+5?\",\n  \"solution\": \"Simple arithmetic\",\n  \"correctAnswer\": \"10\",\n  \"options\": [\"5\", \"10\", \"15\", \"20\"],\n  \"difficulty\": \"medium\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/6788b75c2f82e441703983ec",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"6788b75c2f82e441703983ec"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Question",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"question\": \"What is 5+5?\",\n  \"solution\": \"Simple arithmetic\",\n  \"correctAnswer\": \"10\",\n  \"options\": [\"5\", \"10\", \"15\", \"20\"],\n  \"difficulty\": \"medium\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/6788b75c2f82e441703983ec",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"6788b75c2f82e441703983ec"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "306"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"132-PHGuJk3CYyrTxTcuO3fDUQww+ss\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Jan 2025 07:52:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6788b75c2f82e441703983ec\",\n    \"question\": \"What is 5+5?\",\n    \"solution\": \"Simple arithmetic\",\n    \"correctAnswer\": \"10\",\n    \"options\": [\n        \"5\",\n        \"10\",\n        \"15\",\n        \"20\"\n    ],\n    \"tags\": [\n        \"math\",\n        \"word-problems\"\n    ],\n    \"skills\": [],\n    \"difficulty\": \"medium\",\n    \"steps\": [],\n    \"createdAt\": \"2025-01-16T07:38:04.190Z\",\n    \"updatedAt\": \"2025-01-16T07:52:55.978Z\",\n    \"__v\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/6788b75c2f82e441703983ec",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"6788b75c2f82e441703983ec"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api/questions"
+		},
+		{
+			"key": "questionId",
+			"value": "replace-with-id"
+		}
+	]
+}
