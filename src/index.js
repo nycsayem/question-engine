@@ -12,8 +12,18 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// root endpoint
+app.get('/', function(req, res){
+  res.status(200).json({ sucess: 'Question engine is live!' });
+});
+
 // Routes
 app.use('/api/questions', questionsRouter);
+
+// Middleware to handle 404 errors for undefined routes
+app.use(function(req, res, next) {
+  res.status(404).json({ error: 'Not Found' });
+});
 
 // MongoDB connection with retries and graceful shutdown
 const connectMongoDB = async () => {
